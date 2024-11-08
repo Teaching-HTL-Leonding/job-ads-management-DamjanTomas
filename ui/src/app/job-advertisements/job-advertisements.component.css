@@ -1,0 +1,52 @@
+.job-ads-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+
+.job-ad-title {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  margin-right: auto;
+}
+
+.job-ad-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.job-ad-item button {
+  margin-left: 10px;
+}
+
+.delete-button,
+.detail-button {
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+}
+
+.delete-button {
+  background-color: #ff6666;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #ff3333;
+}
+
+.detail-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.detail-button:hover {
+  background-color: #45a049;
+}
