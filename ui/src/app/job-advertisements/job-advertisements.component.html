@@ -1,0 +1,19 @@
+<div class="job-ads-container">
+  <h1>Job Advertisements</h1>
+
+  <ul *ngIf="jobAds(); else noAdsMessage">
+    <li *ngFor="let ad of jobAds()" class="job-ad-item">
+      <p>{{ad.id}}</p>
+      <p>{{ ad.title }}</p>
+      <p>{{ ad.textEN }}</p>
+
+      <button (click)="deleteAd(ad.id)" class="delete-button">Delete</button>
+
+      <button (click)="goToDetail(ad.id)" class="detail-button">Detail</button>
+    </li>
+  </ul>
+
+  <ng-template #noAdsMessage>
+    <p>No job advertisements available.</p>
+  </ng-template>
+</div>

@@ -1,0 +1,43 @@
+<div class="content">
+  <h3>Job Detail: {{ id() }}</h3>
+  @if(id() != -1) {
+  <form>
+    <div class="input-field">
+      <label for="title">Title</label>
+      <input type="text" id="title" name="title" [(ngModel)]="title" />
+    </div>
+    <div class="input-field">
+      <label for="textEN">Text EN</label>
+      <input type="text" id="textEN" name="textEN" [(ngModel)]="textEN" />
+    </div>
+    <button (click)="updateAds()">Update</button>
+    @for (translation of translation(); track $index) {
+    <div>
+      <p>{{ translation.language }}:</p>
+      <p>{{ translation.translatedText }}</p>
+    </div>
+    }
+    <div>
+      <h3>New Translation</h3>
+      <div class="input-field">
+        <label for="lang">Language</label>
+        <input
+          type="text"
+          id="lang"
+          name="lang"
+          [(ngModel)]="lang"
+          class="lang-input"
+        />
+        <label for="translatedText">Translated Text</label>
+        <input
+          type="text"
+          id="translatedText"
+          name="translatedText"
+          [(ngModel)]="translatedText"
+        />
+      </div>
+    </div>
+  </form>
+  }
+  <button (click)="returnToAllAds()">Return to all jobs</button>
+</div>
